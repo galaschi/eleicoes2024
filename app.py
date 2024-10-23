@@ -28,6 +28,7 @@ else:
 
 # Inicializar o aplicativo Dash com Bootstrap
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 # Configurar o layout
 app.layout = create_layout()
