@@ -28,7 +28,6 @@ else:
 
 # Inicializar o aplicativo Dash com Bootstrap
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-server = app.server
 
 # Configurar o layout
 app.layout = create_layout()
@@ -39,5 +38,4 @@ register_callbacks(app)  # Chame a função que registra os callbacks
 
 # Rodar o aplicativo
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))
-    app.run_server(host='0.0.0.0', port=port)
+    app.run_server()
