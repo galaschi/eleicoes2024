@@ -37,5 +37,6 @@ from callbacks.callbacks import register_callbacks
 register_callbacks(app)  # Chame a função que registra os callbacks
 
 # Rodar o aplicativo
-if __name__ == '__main__':
-    app.run_server(port=8080)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))
+    app.run_server(host='0.0.0.0', port=port)
